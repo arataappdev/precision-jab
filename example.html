@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precision-Jab Demo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; color: #18181b; }
+    section {
+      min-height: 100vh; display: flex; align-items: center;
+      justify-content: center; padding: 40px 20px;
+      font-size: 24px; font-weight: 600;
+    }
+    section:nth-child(odd)  { background: #f5f3ff; }
+    section:nth-child(even) { background: #fff; }
+    .hint { font-size: 14px; color: #71717a; font-weight: 400; margin-top: 8px; }
+  </style>
+</head>
+<body>
+
+  <section>
+    <div>
+      <p>👋 Welcome — scroll down</p>
+      <p class="hint">Social proof triggers below</p>
+    </div>
+  </section>
+
+  <section data-precision-jab="social-proof">
+    <div>
+      <p>📦 Product Section A</p>
+      <p class="hint">← social-proof trigger</p>
+    </div>
+  </section>
+
+  <section><p>Some other content…</p></section>
+
+  <section data-precision-jab="social-proof">
+    <div>
+      <p>📦 Product Section B</p>
+      <p class="hint">← another social-proof trigger</p>
+    </div>
+  </section>
+
+  <section><p>Keep scrolling…</p></section>
+
+  <section data-precision-jab="urgency">
+    <div>
+      <p>⏰ Checkout Section</p>
+      <p class="hint">← urgency trigger — countdown starts here permanently</p>
+    </div>
+  </section>
+
+  <section><p>Countdown bar persists even here.</p></section>
+
+  <!-- Dictionary first, then plugin -->
+  <script src="precision-jab-data.js"></script>
+  <script src="precision-jab.js"></script>
+
+</body>
+</html>
